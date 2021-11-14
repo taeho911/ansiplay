@@ -1,0 +1,30 @@
+# VB Networks
+https://technote.kr/213
+
+# VB list up registered vms
+vboxmanage list vms
+
+# VB export
+vboxmanage export <machines> --output <name>.ova
+
+# VM import
+vboxmanage import <name>.ova
+
+# VB clone
+vboxmanage clonevm <uuid|vmname> --name <name>
+
+# VB create new vm from existing vm
+vboxmanage clonevm <uuid|vmname> --name <name>
+vboxmanage registervm <filename>
+ex)
+vboxmanage clonevm ansi1 --name ansi4
+vboxmanage registervm 'C:\Users\kimdo\VirtualBox VMs\ansi4\ansi4.vbox'
+
+# VB start vms
+vboxmanage startvm ansi1 ansi2 ansi3
+
+# VB start vms backgrount
+vboxmanage startvm ansi1 --type headless
+
+# VB poweroff vms
+vboxmanage controlvm ansi1 poweroff

@@ -1,0 +1,10 @@
+# ssh-keygen을 이용한 ssh 통신
+ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub taeho@192.168.0.4
+ssh-copy-id -i ~/.ssh/id_rsa.pub taeho@192.168.0.5
+
+# ssh command 실행
+ssh 192.168.0.3 "echo Hello"
+ssh 192.168.0.3 < commands.sh
+
+# Windows의 ssh-copy-id

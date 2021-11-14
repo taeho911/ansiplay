@@ -1,0 +1,10 @@
+---
+- name: Execute command
+  remote_user: taeho
+  sudo: yes
+  hosts: all
+  tasks:
+    - name: Copy script
+      copy: src=commnads.sh dset=/opt/scripts mode=0777
+    - name: Execute command
+      command: sh /opt/scripts/commands.sh
