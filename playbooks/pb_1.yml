@@ -5,6 +5,6 @@
   hosts: all
   tasks:
     - name: Copy script
-      copy: src=commnads.sh dset=/opt/scripts mode=0777
+      copy: src=~/scripts/commnads.sh dset=~/scripts mode=0777
     - name: Execute command
-      command: sh /opt/scripts/commands.sh
+      command: sh ~/scripts/commands.sh
