@@ -70,3 +70,11 @@ ssh 192.168.0.3 < commands.sh
 
 # Windows의 ssh-copy-id
 ```
+
+## ansible
+
+```
+# Execute playbook
+ansible-playbook -b -v -u root crunchify_execute_command.yml -kkkk --extra-vars "crunchify-group" -i crunchify-hosts
+
+```

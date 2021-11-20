@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
 CMD=$1
-PB=$2
-SH=$3
 
 case "$CMD" in
 "start")
@@ -13,8 +11,8 @@ case "$CMD" in
     ;;
 "copy")
     echo "copy"
-    scp playbooks/$PB taeho@192.168.0.3:~/playbooks/$PB
-    scp scripts/$SH taeho@192.168.0.3:~/scripts/$SH
+    scp -r playbooks taeho@192.168.0.3:~/playbooks
+    scp -r scripts taeho@192.168.0.3:~/scripts
     ;;
 "ssh")
     echo "ssh"
